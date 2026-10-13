@@ -770,7 +770,7 @@ load_boss_scene:
 	lda #0
 	jsr FamiToneMusicPlay
 
-  jmp start_gameplay_level
+  jmp start_boss_level
 
 ; --------------------------------------------------
 ; load_ending_static_scene
@@ -828,6 +828,22 @@ start_gameplay_level:
 
 ; start scrolling
   lda #$01
+  sta do_scroll
+
+  jmp turn_on_rendering
+
+; --------------------------------------------------
+; boss level
+; --------------------------------------------------
+start_boss_level:
+  lda #0
+  sta scroll_y
+  lda #$FF
+  sta metatile_row_number
+  jsr prepare_next_row
+
+; start scrolling
+  lda #$00
   sta do_scroll
 
   jmp turn_on_rendering
