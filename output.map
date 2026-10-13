@@ -1,0 +1,52 @@
+Modules list:
+-------------
+main.o:
+    CODE              Offs=000000  Size=001573  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=004BA7  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=000048  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=0000DF  Align=00001  Fill=0000
+    HEADER            Offs=000000  Size=00000A  Align=00001  Fill=0000
+    VECTORS           Offs=000000  Size=000006  Align=00001  Fill=0000
+    PRG               Offs=000000  Size=000001  Align=00001  Fill=0000
+    CHRROM_TEXT       Offs=000000  Size=002000  Align=00001  Fill=0000
+    CHRROM_TITLE      Offs=000000  Size=002000  Align=00001  Fill=0000
+    CHRROM_LEVEL1_BEACH     Offs=000000  Size=002000  Align=00001  Fill=0000
+    CHRROM_BOSS      Offs=000000  Size=002000  Align=00001  Fill=0000
+    CHRROM_LEVEL2_GRASS     Offs=000000  Size=002000  Align=00001  Fill=0000
+    CHRROM_LEVEL3_STATION      Offs=000000  Size=002000  Align=00001  Fill=0000
+    CHRROM_ENDING     Offs=000000  Size=002000  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+CHRROM_BOSS          000000  001FFF  002000  00001
+CHRROM_LEVEL3_STATION          000000  001FFF  002000  00001
+CHRROM_ENDING         000000  001FFF  002000  00001
+CHRROM_LEVEL1_BEACH         000000  001FFF  002000  00001
+CHRROM_LEVEL2_GRASS         000000  001FFF  002000  00001
+CHRROM_TEXT           000000  001FFF  002000  00001
+CHRROM_TITLE          000000  001FFF  002000  00001
+HEADER                000000  000009  00000A  00001
+ZEROPAGE              000010  0000EE  0000DF  00001
+BSS                   000300  000347  000048  00001
+PRG                   008000  008000  000001  00001
+CODE                  008100  009672  001573  00001
+RODATA                009700  00E2A6  004BA7  00001
+VECTORS               00FFFA  00FFFF  000006  00001
+
+
+Exports list by name:
+---------------------
+
+
+
+Exports list by value:
+----------------------
+
+
+
+Imports list:
+-------------
+

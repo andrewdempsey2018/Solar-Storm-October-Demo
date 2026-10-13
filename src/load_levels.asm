@@ -56,6 +56,20 @@
   sta prep_next_row
 
 ; --------------------------------------------------
+; Increment some gameplay variables
+; --------------------------------------------------
+  lda #$00
+  sta current_enemy
+  sta enemy_spawn_number
+  sta enemy_spawn_index
+  sta enemy_spawn_wait
+  sta enemy_spawn_script
+  sta enemy_frame_to_draw
+  sta timer
+  sta current_player_bullet
+  sta player_bullet_spawn_number
+
+; --------------------------------------------------
 ; Increment scene number, determine which scene
 ; is next.
 ; --------------------------------------------------
