@@ -189,15 +189,15 @@ load_demoncore_screen_palettes:
 ; Load title screen.
 ; --------------------------------------------------
 load_titlescreen_static_scene:
+  lda #BANK_NUMBER_TITLE
+  sta BANK_SWITCH
+
   ldx #<after_the_rain_music_data
 	ldy #>after_the_rain_music_data
 	lda NTSC_MODE_FAMITONE
 	jsr FamiToneInit
 	lda #0
 	jsr FamiToneMusicPlay
-
-  lda #BANK_NUMBER_TITLE
-  sta BANK_SWITCH
 
   ldx PPUSTATUS
   ldx #$3F
@@ -284,6 +284,9 @@ load_level1_title_scene_palettes:
 ; load_level1_gameplay_scene
 ; --------------------------------------------------
 load_level1_gameplay_scene:
+  lda #BANK_NUMBER_LEVEL1_BEACH
+  sta BANK_SWITCH
+
   ldx PPUSTATUS
   ldx #$3F
   stx PPUADDR
@@ -297,9 +300,6 @@ load_level1_gameplay_scene:
   inx
   cpx #$20
   bne @load_palette
-
-  lda #BANK_NUMBER_LEVEL1_BEACH
-  sta BANK_SWITCH
 
   lda #<BeachData::ScreenX
   sta layout_pointer
@@ -381,8 +381,7 @@ load_level1_gameplay_scene:
 
   jmp start_gameplay_level
 
-;;;level2
-; -level1-------------------------------------------------
+; --------------------------------------------------
 ; load_level2title_static_scene
 ; --------------------------------------------------
 load_level2title_static_scene:
@@ -430,6 +429,9 @@ load_level2_title_scene_palettes:
 ; load_level2_gameplay_scene
 ; --------------------------------------------------
 load_level2_gameplay_scene:
+  lda #BANK_NUMBER_LEVEL2_GRASS
+  sta BANK_SWITCH
+
   ldx PPUSTATUS
   ldx #$3F
   stx PPUADDR
@@ -443,9 +445,6 @@ load_level2_gameplay_scene:
   inx
   cpx #$20
   bne @load_palette
-
-  lda #BANK_NUMBER_LEVEL2_GRASS
-  sta BANK_SWITCH
 
   lda #<GrassData::Screen1
   sta layout_pointer
@@ -575,6 +574,9 @@ load_level3_title_scene_palettes:
 ; load_level3_gameplay_scene
 ; --------------------------------------------------
 load_level3_gameplay_scene:
+  lda #BANK_NUMBER_LEVEL3_STATION
+  sta BANK_SWITCH
+  
   ldx PPUSTATUS
   ldx #$3F
   stx PPUADDR
@@ -588,9 +590,6 @@ load_level3_gameplay_scene:
   inx
   cpx #$20
   bne @load_palette
-
-  lda #BANK_NUMBER_LEVEL3_STATION
-  sta BANK_SWITCH
 
   lda #<StationData::ScreenX
   sta layout_pointer
@@ -675,6 +674,9 @@ load_level3_gameplay_scene:
 ; load boss scene
 ; --------------------------------------------------
 load_boss_scene:
+  lda #BANK_NUMBER_BOSS
+  sta BANK_SWITCH
+
   ldx PPUSTATUS
   ldx #$3F
   stx PPUADDR
@@ -688,9 +690,6 @@ load_boss_scene:
   inx
   cpx #$20
   bne @load_palette
-
-  lda #BANK_NUMBER_BOSS
-  sta BANK_SWITCH
 
   lda #<BossData::ScreenX
   sta layout_pointer
