@@ -101,14 +101,14 @@ Screen1:
   .byte $00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
 
 Screen1Attrib:
-  .byte $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA
-  .byte $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA
-	.byte $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA
-  .byte $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA
-	.byte $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA
-  .byte $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA
-	.byte $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA
-  .byte $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA
+  .byte $00,$00,$00,$00,$00,$00,$00,$00
+  .byte $00,$00,$00,$00,$00,$00,$00,$00
+	.byte $00,$00,$80,$a0,$a0,$a0,$20,$00
+  .byte $00,$00,$00,$00,$00,$00,$00,$00
+	.byte $00,$00,$00,$00,$00,$00,$00,$00
+  .byte $00,$00,$00,$00,$00,$00,$00,$00
+	.byte $00,$00,$00,$00,$00,$00,$00,$00
+  .byte $00,$00,$00,$00,$00,$00,$00,$00
 
 PaletteTable:
   .byte $0f,$15,$35,$24
