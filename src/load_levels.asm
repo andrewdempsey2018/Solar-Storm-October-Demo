@@ -111,10 +111,6 @@
   bne :+
   jmp load_level3title_static_scene
 :
-  cmp #SCENE_NUMBER_LEVEL3_TEXT_SCREEN
-  bne :+
-  jmp load_level3title_static_scene
-:
   cmp #SCENE_NUMBER_LEVEL3_GAMEPLAY_SCENE
   bne :+
   jmp load_level3_gameplay_scene
@@ -574,6 +570,9 @@ load_level3_title_scene_palettes:
 ; load_level3_gameplay_scene
 ; --------------------------------------------------
 load_level3_gameplay_scene:
+  lda #BANK_NUMBER_TEXT ; hack
+  sta BANK_SWITCH
+
   lda #BANK_NUMBER_LEVEL3_STATION
   sta BANK_SWITCH
   
@@ -674,6 +673,9 @@ load_level3_gameplay_scene:
 ; load boss scene
 ; --------------------------------------------------
 load_boss_scene:
+  lda #BANK_NUMBER_TEXT ; hack
+  sta BANK_SWITCH
+  
   lda #BANK_NUMBER_BOSS
   sta BANK_SWITCH
 
