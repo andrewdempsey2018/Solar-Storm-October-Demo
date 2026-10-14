@@ -56,7 +56,7 @@
   sta prep_next_row
 
 ; --------------------------------------------------
-; Increment some gameplay variables
+; Reset some gameplay variables
 ; --------------------------------------------------
   lda #$00
   sta current_enemy
@@ -68,6 +68,24 @@
   sta timer
   sta current_player_bullet
   sta player_bullet_spawn_number
+
+  ldx #NUMBER_OF_ENEMIES
+  lda #$00
+:
+
+  sta enemy_x_hi, x
+  sta enemy_x_lo, x
+  sta enemy_y_hi, x
+  sta enemy_y_lo, x
+  sta enemy_type, x
+  sta enemy_flags, x
+  sta enemy_path, x
+  sta enemy_path_index, x
+  sta enemy_frame_number, x
+  sta enemy_health, x
+  dex
+  cpx #0
+  bne :-
 
 ; --------------------------------------------------
 ; Increment scene number, determine which scene
